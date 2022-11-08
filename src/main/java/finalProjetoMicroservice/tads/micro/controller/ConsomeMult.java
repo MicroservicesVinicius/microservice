@@ -6,13 +6,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.client.RestTemplate;
 
 @RequestMapping("/api/")
-public class ConsomeDiv {
+public class ConsomeMult {
     @GetMapping("multiplicar")
-    Integer divNumbers(@PathVariable Integer num1,@PathVariable Integer num2){
-       String url = "http://localhost:9000/div";
+    Integer multNumbers(@PathVariable Integer num1,@PathVariable Integer num2){
+       String url = "http://localhost:9000/mult";
        RestTemplate restTemplate = new RestTemplate();
        Integer result = restTemplate.getForObject(url, Integer.class); 
     return result;
     }
+    
     
 }
