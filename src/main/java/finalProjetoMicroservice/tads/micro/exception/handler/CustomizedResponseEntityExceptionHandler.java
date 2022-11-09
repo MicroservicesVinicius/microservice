@@ -8,14 +8,15 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.WebRequest;
+import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 import finalProjetoMicroservice.tads.micro.exception.ExceptionResponse;
 import finalProjetoMicroservice.tads.micro.exception.InvalidCharacterException;
 
 @RestController
 @ControllerAdvice // Captura as Exceções
-public class CustomizedResponseEntityExceptionHandler {
-    
+public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
+
     @ExceptionHandler(Exception.class)
     public final ResponseEntity<ExceptionResponse> handleAllExceptions(Exception ex, WebRequest request) {
         var exceptionResponse = new ExceptionResponse(new Date(), ex.getMessage(), request.getDescription(false));
@@ -27,4 +28,10 @@ public class CustomizedResponseEntityExceptionHandler {
         var exceptionResponse = new ExceptionResponse(new Date(), ex.getMessage(), request.getDescription(false));
         return new ResponseEntity<>(exceptionResponse, HttpStatus.BAD_REQUEST);
     }
+    //  @ExceptionHandler(ArithimeticException.class)
+    //  public final ResponseEntity<ExceptionResponse> handleBadRequestExceptions2(Exception ex, WebRequest request) {
+    //      var exceptionResponse = new ExceptionResponse(new Date(), ex.getMessage(), request.getDescription(false));
+    
+    // return new ResponseEntity<>(exceptionResponse, HttpStatus.BAD_REQUEST);
+    // }
 }
