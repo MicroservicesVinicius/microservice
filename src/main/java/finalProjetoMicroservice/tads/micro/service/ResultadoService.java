@@ -6,7 +6,8 @@ public class ResultadoService {
         return num1+num2;
     }
 
-    //sub
+    //subgit status
+    
     public Double sub(double num1,double num2){
         return num1-num2;
     }
