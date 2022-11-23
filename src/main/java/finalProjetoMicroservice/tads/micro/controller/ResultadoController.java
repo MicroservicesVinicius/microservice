@@ -10,9 +10,13 @@ import finalProjetoMicroservice.tads.micro.service.ResultadoService;
 @RequestMapping("/api")
 public class ResultadoController {
     @Autowired
-    ResultadoService somaService;
-    @GetMapping("/a/{num1}/b/{num2}/c/{num3}")
-    Integer getSoma(@PathVariable Integer num1,@PathVariable Integer num2,@PathVariable Integer num3){
-        return somaService.calcFinal();
-    }
+    ResultadoService rs;
+    @GetMapping("/a/{a}/b/{b}/c/{c}")
+    String getSoma(@PathVariable double a,@PathVariable double b,@PathVariable double c){
+        Double delta = rs.sub(rs.mult(b,b),rs.mult(4.0, rs.mult(a, c)) );
+        Double x1 = rs.div(rs.soma(rs.mult(b, -1.0), rs.raiz(delta)),rs.mult(2.0, a));
+        Double x2 = rs.div(rs.sub(rs.mult(b, -1.0), rs.raiz(delta)),rs.mult(2.0, a));
+        
+        return "x1="+ x1 + "e" + "x2="+ x2;
+    }   
 }

@@ -1,6 +1,5 @@
 package finalProjetoMicroservice.tads.micro.exception.handler;
 
-
 import java.util.Date;
 
 import org.springframework.http.HttpStatus;

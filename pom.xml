@@ -8,7 +8,7 @@
 		<version>2.7.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>blabla.tads</groupId>
+	<groupId>trabalhofinal.tads</groupId>
 	<artifactId>micro</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>micro</name>
