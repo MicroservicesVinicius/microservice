@@ -1,0 +1,17 @@
+server:
+  port: 8101  
+soma: 
+    url: 'http://localhost:8001/soma'
+sub:
+  url: 'http://localhost:8500/sub'
+raiz:
+  url: 'http://localhost:9000/raiz'
+div:
+  url: 'http://localhost:9500/div'
+mult:
+  url: 'http://localhost:9500/mult'
+
+
+
+
+
