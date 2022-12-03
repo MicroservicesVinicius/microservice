@@ -1,4 +1,4 @@
-package finalProjetoMicroservice.tads.micro;
+package finalProjetoMicroservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

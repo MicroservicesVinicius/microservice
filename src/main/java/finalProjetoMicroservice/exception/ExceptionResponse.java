@@ -1,4 +1,4 @@
-package finalProjetoMicroservice.tads.micro.exception;
+package finalProjetoMicroservice.exception;
 
 import java.util.Date;
 

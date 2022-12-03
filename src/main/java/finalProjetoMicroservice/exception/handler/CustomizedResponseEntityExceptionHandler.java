@@ -1,4 +1,4 @@
-package finalProjetoMicroservice.tads.micro.exception.handler;
+package finalProjetoMicroservice.exception.handler;
 
 import java.util.Date;
 
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import finalProjetoMicroservice.tads.micro.exception.ExceptionResponse;
-import finalProjetoMicroservice.tads.micro.exception.InvalidCharacterException;
+import finalProjetoMicroservice.exception.ExceptionResponse;
+import finalProjetoMicroservice.exception.InvalidCharacterException;
 
 @RestController
 @ControllerAdvice // Captura as Exceções

@@ -1,26 +1,17 @@
-package finalProjetoMicroservice.tads.micro.service;
+package finalProjetoMicroservice.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import finalProjetoMicroservice.interfaces.DivInterface;
-import finalProjetoMicroservice.interfaces.MultInterface;
-import finalProjetoMicroservice.interfaces.RaizInterface;
-import finalProjetoMicroservice.interfaces.SomaInterface;
-import finalProjetoMicroservice.interfaces.SubInterface;
+
 
 @Service
 public class ResultadoService {
-    @Autowired
+
+
     private RestTemplate restTemplate;
-    final private SomaInterface somaInterface;
-    final private SubInterface subInterface;
-    final private RaizInterface raizInterface;
-    final private DivInterface divInterface;
-    final private MultInterface multInterface;
-    
+
     @Value("${soma.url}")
     private String somaUrl;
     @Value("${sub.url}")
@@ -32,16 +23,13 @@ public class ResultadoService {
     @Value("${mult.url}")
     private String multUrl;
 
-    public ResultadoService( SomaInterface somaInterface, SubInterface subInterface,  DivInterface divInterface, RaizInterface raizInterface, MultInterface multInterface){
-        this.somaInterface = somaInterface;
-        this.subInterface = subInterface;
-        this.divInterface = divInterface;
-        this.raizInterface = raizInterface;
-        this.multInterface = multInterface;
+    public ResultadoService(RestTemplate restTemplate){
+        this.restTemplate = restTemplate;
 
     }
     //soma
     public Double soma(double num1,double num2){
+        
         return restTemplate.getForObject(somaUrl,Double.class,num1,num2);
     }
 

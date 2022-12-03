@@ -1,11 +1,11 @@
-package finalProjetoMicroservice.tads.micro.controller;
+package finalProjetoMicroservice.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import finalProjetoMicroservice.tads.micro.service.ResultadoService;
+import finalProjetoMicroservice.service.ResultadoService;
 
 @RequestMapping("/api")
 public class ResultadoController {
@@ -23,7 +23,7 @@ public class ResultadoController {
             
             return "<h2>x1="+ x1 + "e" + "x2="+ x2 + "</h2>";
         } catch (Exception e) {
-            // TODO: handle exception
+            
             throw new NumberFormatException("Não é permitido letra na url!");
         }
        
