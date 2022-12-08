@@ -1,15 +1,15 @@
 server:
-  port: 8101  
+  port: 7300
 soma: 
-    url: 'http://localhost:8001/soma'
+  url: 'http://10.8.38.232:8087/sum/'
 sub:
-  url: 'http://localhost:8500/sub'
+  url: 'http://10.8.38.232:8088/sub/'
 raiz:
-  url: 'http://localhost:9000/raiz'
+  url: 'http://10.8.38.232:9000/squareroot/'
 div:
-  url: 'http://localhost:9500/div'
+  url: 'http://10.8.38.232:8020/divisao/'
 mult:
-  url: 'http://localhost:9500/mult'
+  url: 'http://10.8.38.232:8300/mult/'
 
 
 
